@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Harikanth - Professional SEO Analyst & Digital Marketing Specialist" />
+  <meta name="keywords" content="Harikanth, SEO Analyst, Digital Marketer, Content Strategist, SEO Consultant, Zoro Digital Marketing" />
+  <title>Harikanth | SEO Analyst & Digital Marketing Specialist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #2563eb;
+      --primary-dark: #1e40af;
+      --secondary-color: #f59e0b;
+      --dark-color: #1e293b;
+      --light-color: #f8fafc;
+      --gray-color: #64748b;
+      --max-width: 1200px;
+      --border-radius: 8px;
+      --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      color: var(--dark-color);
+      line-height: 1.6;
+    }
+    
+    /* Header Styles with Background Image */
+    header {
+      background: 
+        linear-gradient(rgba(245, 247, 250, 0.9), rgba(245, 247, 250, 0.9)),
+        url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+      padding: 120px 20px;
+      text-align: center;
+      position: relative;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    
+    .profile-container {
+      position: relative;
+      margin: 0 auto;
+      max-width: 200px;
+    }
+    
+    .profile-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: var(--box-shadow);
+      position: relative;
+      z-index: 2;
+    }
+    
+    .profile-bg {
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      background: var(--primary-color);
+      border-radius: 50%;
+      top: -20px;
+      left: -20px;
+      opacity: 0.1;
+      z-index: 1;
+    }
+    
+    header h1 {
+      font-size: 2.8rem;
+      margin: 30px 0 15px;
+      font-weight: 800;
+      color: var(--dark-color);
+    }
+    
+    header p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--gray-color);
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 12px 30px;
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin: 10px;
+    }
+    
+    .cta-button:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--box-shadow);
+    }
+    
+    .cta-button.secondary {
+      background-color: transparent;
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+    }
+    
+    /* Navigation */
+    nav {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .logo {
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+    
+    nav a {
+      color: var(--dark-color);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    nav a:hover {
+      color: var(--primary-color);
+    }
+    
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: var(--primary-color);
+      transition: all 0.3s ease;
+    }
+    
+    nav a:hover::after {
+      width: 100%;
+    }
+    
+    /* Sections */
+    section {
+      padding: 80px 20px;
+      max-width: var(--max-width);
+      margin: auto;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    h2 {
+      font-size: 2.2rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 3px;
+      bottom: -10px;
+      left: 25%;
+      background-color: var(--secondary-color);
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: var(--dark-color);
+    }
+    
+    p {
+      margin-bottom: 20px;
+      color: var(--gray-color);
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+    
+    /* About Section */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    
+    .about-image {
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+    }
+    
+    .about-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    
+    .about-image img:hover {
+      transform: scale(1.03);
+    }
+    
+    /* Skills Section */
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .skill-category {
+      background: white;
+      padding: 30px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      transition: all 0.3s ease;
+    }
+    
+    .skill-category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .skill-category h3 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .skill-category h3 i {
+      color: var(--secondary-color);
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    li {
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+      color: var(--gray-color);
+    }
+    
+    li::before {
+      content: "▹";
+      color: var(--secondary-color);
+      position: absolute;
+      left: 0;
+    }
+    
+    /* Projects Section */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .project-card {
+      background: white;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+      transition: all 0.3s ease;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .project-image {
+      height: 200px;
+      overflow: hidden;
+    }
+    
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .project-card:hover .project-image img {
+      transform: scale(1.05);
+    }
+    
+    .project-info {
+      padding: 25px;
+    }
+    
+    .project-info h3 {
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+    
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 15px 0;
+    }
+    
+    .project-tag {
+      background-color: #e2e8f0;
+      color: var(--dark-color);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    
+    /* Blog Section */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+    
+    .blog-card {
+      background: white;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+      transition: transform 0.3s ease;
+    }
+    
+    .blog-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .blog-image {
+      height: 200px;
+      overflow: hidden;
+    }
+    
+    .blog-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .blog-card:hover .blog-image img {
+      transform: scale(1.1);
+    }
+    
+    .blog-content {
+      padding: 25px;
+    }
+    
+    .blog-content h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: var(--dark-color);
+    }
+    
+    .blog-meta {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+      color: var(--gray-color);
+    }
+    
+    .read-more {
+      display: inline-block;
+      color: var(--primary-color);
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 15px;
+    }
+    
+    .read-more:hover {
+      text-decoration: underline;
+    }
+    
+    /* About Harikanth Blog Post */
+    .blog-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+    
+    .blog-post {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 40px;
+      box-shadow: var(--box-shadow);
+    }
+    
+    .blog-post h3 {
+      font-size: 1.8rem;
+      color: var(--dark-color);
+      margin-bottom: 20px;
+    }
+    
+    .blog-post img {
+      width: 100%;
+      border-radius: var(--border-radius);
+      margin: 20px 0;
+      height: 400px;
+      object-fit: cover;
+    }
+    
+    .blog-post p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    
+    .blog-post ul {
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+    
+    .blog-post li {
+      margin-bottom: 10px;
+    }
+    
+    /* Contact Section */
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .contact-icon {
+      font-size: 1.5rem;
+      color: var(--secondary-color);
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #e2e8f0;
+      color: var(--dark-color);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    
+    .social-link:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--dark-color);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+    
+    .footer-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+    
+    .footer-col h3 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+    }
+    
+    .footer-col p {
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: var(--secondary-color);
+      padding-left: 5px;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 40px;
+      margin-top: 40px;
+      border-top: 1px solid #334155;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+    
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background-color: var(--primary-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      text-decoration: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 99;
+    }
+    
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .about-content,
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .about-image {
+        order: -1;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      header {
+        padding: 100px 20px;
+      }
+      
+      section {
+        padding: 60px 20px;
+      }
+      
+      .blog-post img {
+        height: 250px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .cta-buttons {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .cta-button {
+        width: 100%;
+        text-align: center;
+      }
+      
+      header h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="logo">Harikanth</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="profile-container">
+      <div class="profile-bg"></div>
+      <img src="hari.jpeg" 
+           alt="Harikanth Profile" class="profile-image">
+    </div>
+    <h1>Harikanth</h1>
+    <p>SEO Analyst, Digital Marketer & YouTuber with 5K+ Subscribers</p>
+    <div class="cta-buttons">
+      <a href="#contact" class="cta-button">Get In Touch</a>
+      <a href="#blog" class="cta-button secondary">Read My Blog</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="section-title">
+      <h2>About Me</h2>
+    </div>
+    <div class="about-content">
+      <div class="about-text">
+        <p>I'm Harikanth, a passionate digital marketer and SEO specialist with over 5 years of experience helping businesses grow their online presence. My approach combines technical expertise with creative strategy to deliver measurable results.</p>
+        <p>As a YouTuber with over 5,000 subscribers, I create content that helps aspiring digital marketers learn SEO techniques and growth strategies. My channel focuses on practical, actionable advice that viewers can implement immediately.</p>
+        <p>Specializing in SaaS, IT services, and consulting industries, I've helped numerous companies improve their search rankings, increase organic traffic, and generate more qualified leads through data-driven digital marketing strategies.</p>
+      </div>
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2" alt="Harikanth working on SEO analysis">
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-title">
+      <h2>My Skills</h2>
+    </div>
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3><i class="fas fa-search"></i> SEO Expertise</h3>
+        <ul>
+          <li>Technical SEO Audits</li>
+          <li>On-Page & Off-Page Optimization</li>
+          <li>Keyword Research & Strategy</li>
+          <li>Local SEO</li>
+          <li>E-commerce SEO</li>
+          <li>SEO Analytics & Reporting</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3><i class="fas fa-chart-line"></i> Digital Marketing</h3>
+        <ul>
+          <li>Content Marketing Strategy</li>
+          <li>YouTube Growth Strategies</li>
+          <li>PPC & Paid Advertising</li>
+          <li>Email Marketing</li>
+          <li>Conversion Rate Optimization</li>
+          <li>Marketing Automation</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3><i class="fas fa-tools"></i> Technical Skills</h3>
+        <ul>
+          <li>Google Analytics & Search Console</li>
+          <li>Google Tag Manager</li>
+          <li>WordPress & Webflow Development</li>
+          <li>HTML/CSS Basics</li>
+          <li>SEO Tools (Ahrefs, SEMrush, Moz)</li>
+          <li>Data Analysis & Visualization</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-title">
+      <h2>Featured Projects</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Zoro Digital Marketing">
+        </div>
+        <div class="project-info">
+          <h3>Zoro Digital Marketing</h3>
+          <p>Founded and grew a full-service digital marketing agency helping businesses improve their online visibility and lead generation.</p>
+          <div class="project-tags">
+            <span class="project-tag">SEO</span>
+            <span class="project-tag">Content Marketing</span>
+            <span class="project-tag">PPC</span>
+          </div>
+          <a href="#" class="cta-button">View Case Study</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="Ondezx SEO Strategy">
+        </div>
+        <div class="project-info">
+          <h3>Ondezx SEO Strategy</h3>
+          <p>Developed and implemented a comprehensive SEO strategy for IT services company resulting in 150% organic traffic growth.</p>
+          <div class="project-tags">
+            <span class="project-tag">Technical SEO</span>
+            <span class="project-tag">Content Strategy</span>
+            <span class="project-tag">Link Building</span>
+          </div>
+          <a href="#" class="cta-button">View Case Study</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d" alt="ISRO Internship">
+        </div>
+        <div class="project-info">
+          <h3>Machine Learning for ISRO</h3>
+          <p>Developed machine learning models during internship to analyze satellite data for improved earth observation.</p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Machine Learning</span>
+            <span class="project-tag">Data Analysis</span>
+          </div>
+          <a href="#" class="cta-button">View Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <div class="section-title">
+      <h2>SEO Blog</h2>
+      <p>Latest insights and strategies to boost your online presence</p>
+    </div>
+    
+    <div class="blog-grid">
+      <!-- Blog Post 1 - About Harikanth -->
+      <div class="blog-card">
+        <div class="blog-image">
+          <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2" alt="Harikanth SEO Expert">
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span><i class="far fa-calendar-alt"></i> June 10, 2025</span>
+            <span><i class="far fa-clock"></i> 5 min read</span>
+          </div>
+          <h3>Who is Harikanth? The SEO Expert and Digital Marketer You Should Know</h3>
+          <p>Learn about Harikanth, the SEO analyst, digital marketer and YouTuber with 5K+ subscribers who's helping businesses grow online.</p>
+          <a href="#harikanth-bio" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <!-- Blog Post 2 - High Volume Keyword -->
+      <div class="blog-card">
+        <div class="blog-image">
+          <img src="https://images.unsplash.com/photo-1546074177-ffdda98d214f" alt="SEO content writing">
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span><i class="far fa-calendar-alt"></i> May 28, 2025</span>
+            <span><i class="far fa-clock"></i> 8 min read</span>
+          </div>
+          <h3>SEO Content Writing: How to Create Content That Ranks</h3>
+          <p>Master the art of writing content that both satisfies search algorithms and engages your target audience.</p>
+          <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <!-- Blog Post 3 - High Volume Keyword -->
+      <div class="blog-card">
+        <div class="blog-image">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Local SEO techniques">
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span><i class="far fa-calendar-alt"></i> May 15, 2025</span>
+            <span><i class="far fa-clock"></i> 6 min read</span>
+          </div>
+          <h3>7 Powerful Local SEO Techniques to Dominate Your Market</h3>
+          <p>Learn how to optimize your business for local searches and attract more customers from your geographic area.</p>
+          <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Detailed About Harikanth Blog Post -->
+    <div id="harikanth-bio" class="blog-post" style="margin-top: 80px;">
+      <h3>Who is Harikanth? The SEO Expert and Digital Marketer You Should Know</h3>
+      <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2" alt="Harikanth working on SEO">
+      
+      <p><strong>Harikanth</strong> is a renowned <strong>SEO expert</strong>, <strong>digital marketer</strong>, and <strong>YouTuber</strong> with over 5,000 subscribers on his channel where he shares valuable insights about search engine optimization and digital marketing strategies.</p>
+      
+      <p>With years of experience in the industry, <strong>Harikanth</strong> has helped numerous businesses improve their online visibility through his expertise in:</p>
+      <ul>
+        <li>Technical SEO optimization</li>
+        <li>Content marketing strategies</li>
+        <li>YouTube growth techniques</li>
+        <li>Local SEO implementation</li>
+        <li>Website performance enhancement</li>
+      </ul>
+      
+      <h4>Harikanth's Background and Achievements</h4>
+      <p>As the founder of <strong>HKR Digital Marketing</strong>, Harikanth leads a team of professionals dedicated to helping businesses succeed online. His YouTube channel has become a go-to resource for marketers looking to learn:</p>
+      
+      <ul>
+        <li>How to rank websites higher in search results</li>
+        <li>Effective keyword research methods</li>
+        <li>Content creation that converts</li>
+        <li>YouTube SEO best practices</li>
+        <li>Digital marketing trends for 2025</li>
+      </ul>
+      
+      <p>Harikanth's journey began with an internship at ISRO where he worked on machine learning models for satellite data analysis. This technical background gives him a unique perspective on SEO and digital marketing, allowing him to bridge the gap between technical implementation and creative strategy.</p>
+      
+      <h4>Why Follow Harikanth?</h4>
+      <p>What sets <strong>Harikanth</strong> apart is his ability to explain complex SEO concepts in simple terms that anyone can understand. His practical approach to digital marketing has earned him recognition as one of the emerging experts in the field.</p>
+      
+      <p>Whether you're looking to:</p>
+      <ul>
+        <li>Improve your website's search rankings</li>
+        <li>Grow your YouTube channel</li>
+        <li>Develop a comprehensive digital marketing strategy</li>
+        <li>Learn the latest SEO techniques</li>
+      </ul>
+      
+      <p>Following <strong>Harikanth's</strong> work can provide you with the knowledge and tools you need to succeed in the competitive digital landscape.</p>
+      
+      <p>Connect with Harikanth on <a href="https://www.linkedin.com/in/hari-kanth" target="_blank">LinkedIn</a>, <a href="https://www.instagram.com/hari_kanth_?igsh=MXNqNTF1ZncyNjhsdA==" target="_blank">Instagram</a>, and his <a href="#" target="_blank">YouTube channel</a> to stay updated with his latest insights and tutorials.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-title">
+      <h2>Get In Touch</h2>
+    </div>
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div>
+            <h3>Email</h3>
+            <a href="mailto:hariharan900394@gmail.com">hariharan900394@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div>
+            <h3>Location</h3>
+            <p>Based in India</p>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/hari-kanth" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/hari_kanth_?igsh=MXNqNTF1ZncyNjhsdA==" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <form action="mailto:hariharan900394@gmail.com" method="post" enctype="text/plain">
+          <div style="margin-bottom: 20px;">
+            <label style="display: block; margin-bottom: 8px;">Your Name</label>
+            <input type="text" name="name" style="width: 100%; padding: 12px; border-radius: var(--border-radius); border: 1px solid #e2e8f0;" required>
+          </div>
+          <div style="margin-bottom: 20px;">
+            <label style="display: block; margin-bottom: 8px;">Email</label>
+            <input type="email" name="email" style="width: 100%; padding: 12px; border-radius: var(--border-radius); border: 1px solid #e2e8f0;" required>
+          </div>
+          <div style="margin-bottom: 20px;">
+            <label style="display: block; margin-bottom: 8px;">Message</label>
+            <textarea name="message" style="width: 100%; padding: 12px; border-radius: var(--border-radius); border: 1px solid #e2e8f0; min-height: 150px;" required></textarea>
+          </div>
+          <button type="submit" class="cta-button">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Harikanth</h3>
+        <p>Helping businesses grow through strategic digital marketing and SEO solutions.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul class="footer-links">
+          <li><a href="#">SEO Consulting</a></li>
+          <li><a href="#">Content Strategy</a></li>
+          <li><a href="#">Digital Marketing</a></li>
+          <li><a href="#">YouTube Growth</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Connect</h3>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/hari-kanth" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/hari_kanth_?igsh=MXNqNTF1ZncyNjhsdA==" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Harikanth. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+  <script>
+    // Back to Top Button
+    const backToTopButton = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('active');
+      } else {
+        backToTopButton.classList.remove('active');
+      }
+    });
+    
+    backToTopButton.addEventListener('click)
